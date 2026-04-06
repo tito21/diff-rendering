@@ -1,0 +1,13 @@
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# images
+*.png
+*.jpg
+*.xcf
+*.mp4
+!images/*.png
+!output/rendered_*.png
