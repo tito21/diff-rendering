@@ -27,7 +27,8 @@ uv run main.py input_image \
                [--saliency_map SALIENCY_MAP] \
                [--steps STEPS] \
                [--lr LR] \
-               [--inner_steps INNER_STEPS]
+               [--inner_steps INNER_STEPS] \
+               [--seed SEED]
 ```
 
 The options are available:
@@ -48,6 +49,7 @@ options:
   --lr LR               Learning rate for optimization
   --inner_steps INNER_STEPS
                         Number of inner optimization steps per source image
+  --seed SEED           Random seed for reproducibility
 
 ```
 

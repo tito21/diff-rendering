@@ -65,6 +65,13 @@ def parse_args():
         default=500,
         help="Number of inner optimization steps per source image",
     )
+
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=None,
+        help="Random seed for reproducibility",
+    )
     args = parser.parse_args()
 
     return args
@@ -72,6 +79,9 @@ def parse_args():
 
 def main():
     args = parse_args()
+
+    if args.seed is not None:
+        torch.manual_seed(args.seed)
 
     input_image = load_image(args.input_image).to(device)
     if args.saliency_map is None:
