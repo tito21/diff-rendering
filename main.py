@@ -129,10 +129,10 @@ def main():
             loss = loss1
             loss.backward()
             optim.step()
-            
+
             bar.set_postfix({"loss": f"{loss.item():.6f}", "MSE": f"{loss_mse.item():.6f}"})
 
-        dest_image, _ = render_image(dest_image, source_image, theta, color)
+        dest_image = render_image(dest_image, source_image, theta, color)
         dest_image = dest_image.detach()
         if i % 10 == 0:
             save_image(
