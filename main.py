@@ -112,9 +112,9 @@ def main():
         idx = torch.randint(0, len(source_images), (1,)).item()
         source_image = source_images[idx]
         ratio = source_image.shape[2] / source_image.shape[3]
-        angle = torch.randn(1, device=device) * 0.5
+        angle = torch.randn(1, device=device) * 2 * torch.pi
         scale = (10 * torch.rand(1, device=device)).clamp(1.0, 10.0)
-        translation = -0.5 + torch.rand(2, device=device)
+        translation = -1.0 + 2 * torch.rand(2, device=device)
         color = torch.rand(4, device=device)
         angle.requires_grad = True
         scale.requires_grad = True
