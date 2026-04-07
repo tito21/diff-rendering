@@ -12,3 +12,4 @@ __pycache__/
 !images/*.png
 !output/rendered_*.png
 !music_shapes.jpg
+!gallery/*.png
